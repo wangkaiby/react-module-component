@@ -1,7 +1,7 @@
 ## Install
 
 ```
-npm i react-tiny-autosuggest
+npm i
 ```
 
 ## Usage
