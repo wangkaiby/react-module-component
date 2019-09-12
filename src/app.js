@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import AutoSuggest from './Autosuggest';
+import Loading from './Loading';
 
-const suggestions = ['C', 'C++', 'Python', 'Java', 'Javascript', 'PHP'];
-const handleSelect = selection => alert(`You selected ${selection}`);
+const buttonName = 'firstButton';
 
-ReactDOM.render(<AutoSuggest suggestions={suggestions} onSelect={handleSelect}/>, document.getElementById('app'));
+ReactDOM.render(<Loading buttonName={buttonName} />, document.getElementById('app'));
