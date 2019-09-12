@@ -1,6 +1,6 @@
 {
   "name": "wk-react-loading",
-  "version": "0.0.6",
+  "version": "1.0.1",
   "description": "react loading component",
   "main": "dist/bundle.js",
   "files": [
