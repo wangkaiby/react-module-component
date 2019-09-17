@@ -1,11 +1,22 @@
-import React from 'react'
-// import './Loading.css';
-import style from './Loading.cm.styl';
+import React from 'react';
+import PropTypes from 'prop-types';
+import './index.scss';
 
-export default (props) => {
-    return (
-        <div className={style.autoSuggest}>
-           loading...
-        </div>
-    )
-}
+const Loading = (props) => {
+	const { buttonName } = props;
+	return (
+		<div className="suggest">
+      loading.....
+			{ buttonName }
+		</div>
+	);
+};
+
+Loading.propTypes = {
+	buttonName: PropTypes.string,
+};
+Loading.defaultProps = {
+	buttonName: '',
+};
+
+export default Loading;
