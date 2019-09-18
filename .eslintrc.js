@@ -23,47 +23,47 @@ module.exports = {
     }
   },
   "extends": [
-    "airbnb"
+    "airbnb",
+    'plugin:react/recommended',
+
   ],
   "plugins": [
     "react"
   ],
   "rules": {
-    "react/jsx-uses-react":2,
-    "react/jsx-uses-vars":2,
-    "react/react-in-jsx-scope":2,
-    "indent": [
-    "error",
-    "tab"
-    ],
-    "linebreak-style": [
-    "error",
-    "windows"
-    ],
-    "quotes": [
-    "error",
-    "single"
-    ],
-    "semi": [
-    "error",
-    "always"
-    ],
-    "react/jsx-indent": [ // 解决react里面的缩进问题
-    "error",
-    "tab"
-    ],
-    "react/jsx-indent-props": [ //
-    "error",
-    "tab"
-    ],
-    "no-tabs": "off", // 禁止缩进错误
-    // 允许使用 for in
-    "no-restricted-syntax": 0,
-    "guard-for-in": 0,
-    // 允许在 .js 和 .jsx 文件中使用 jsx
+    'import/prefer-default-export': 0,
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    // 不区分是否是 无状态组件
-    "react/prefer-stateless-function": 0
-    }
-    
+    'jsx-a11y/no-static-element-interactions': 0,
+    'jsx-a11y/anchor-has-content': 0,
+    'jsx-a11y/click-events-have-key-events': 0,
+    'jsx-a11y/anchor-is-valid': 0,
+    'comma-dangle': ['error', 'always-multiline'],
+    'react/jsx-filename-extension': 0,
+    'react/state-in-constructor': 0,
+    'react/jsx-props-no-spreading': 0,
+    'prefer-destructuring': 0, // TODO: remove later
+    'consistent-return': 0, // TODO: remove later
+    'no-return-assign': 0, // TODO: remove later
+    'no-param-reassign': 0, // TODO: remove later
+    'react/destructuring-assignment': 0, // TODO: remove later
+    'react/no-did-update-set-state': 0, // TODO: remove later
+    'react/require-default-props': 0,
+    'react/default-props-match-prop-types': 0,
+    'import/no-cycle': 0,
+    'react/no-find-dom-node': 0,
+    'no-underscore-dangle': 0,
+    // label-has-for has been deprecated
+    // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/label-has-for.md
+    'jsx-a11y/label-has-for': 0,
+    // for (let i = 0; i < len; i++)
+    'no-plusplus': 0,
+    // https://eslint.org/docs/rules/no-continue
+    // labeledLoop is conflicted with `eslint . --fix`
+    'no-continue': 0,
+    'react/display-name': 0,
+    // ban this for Number.isNaN needs polyfill
+    'no-restricted-globals': 0,
+    'max-classes-per-file': 0,
+    'react/static-property-placement': 0,
+  }
 };

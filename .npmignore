@@ -3,4 +3,4 @@ conf/
 src/
 test/
 .vscode/
-
+coverage/

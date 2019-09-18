@@ -3,20 +3,17 @@ import PropTypes from 'prop-types';
 import './index.scss';
 
 const Loading = (props) => {
-	const { buttonName } = props;
-	return (
-		<div className="suggest">
+  const { buttonName } = props;
+  return (
+    <div className="suggest">
       loading.....
-			{ buttonName }
-		</div>
-	);
+      { buttonName }
+    </div>
+  );
 };
 
 Loading.propTypes = {
-	buttonName: PropTypes.string,
-};
-Loading.defaultProps = {
-	buttonName: '',
+  buttonName: PropTypes.string.isRequired,
 };
 
 export default Loading;

@@ -1,6 +1,6 @@
 {
   "name": "wk-react-loading",
-  "version": "1.0.3",
+  "version": "1.0.6",
   "description": "react loading component",
   "main": "dist/bundle.js",
   "files": [
@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "start": "webpack-dev-server --inline --progress --config ./conf/webpack.dev.config.js",
-    "test": "..",
+    "test": "jest --notify --coverage --colors --watchman=false",
     "buildnorm": "webpack --config ./conf/webpack.prod.config.js",
     "build": "node ./build/prod.js",
     "lint": "eslint --ext .js --ext .jsx src",
@@ -28,10 +28,15 @@
     "@babel/preset-env": "7.2.3",
     "@babel/preset-react": "7.0.0",
     "@hot-loader/react-dom": "^16.7.0",
+    "autoprefixer": "^9.6.1",
     "babel-eslint": "^10.0.2",
     "babel-loader": "8.0.5",
+    "chai": "^4.2.0",
     "chalk": "^2.4.2",
+    "cross-env": "^5.2.0",
     "css-loader": "0.28.9",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
     "eslint": "^6.1.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-friendly-formatter": "^4.0.1",
@@ -41,7 +46,10 @@
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^2.0.1",
     "file-loader": "^4.2.0",
+    "html-loader": "^0.5.5",
     "html-webpack-plugin": "3.2.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.9.0",
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
     "mini-css-extract-plugin": "^0.8.0",
@@ -61,5 +69,13 @@
     "webpack-dev-server": "3.1.14",
     "webpack-merge": "^4.2.2",
     "webpack-node-externals": "1.6.0"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    },
+    "moduleNameMapper": {
+      "\\.(s?css|less)$": "identity-obj-proxy"
+    }
   }
 }
