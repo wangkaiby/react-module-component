@@ -9,10 +9,10 @@
   "scripts": {
     "start": "webpack-dev-server --inline --progress --config ./conf/webpack.dev.config.js",
     "test": "jest --notify --coverage --colors --watchman=false",
-    "buildnorm": "webpack --config ./conf/webpack.prod.config.js",
-    "build": "node ./build/prod.js",
+    "build": "npm run lint && npm run test && node ./build/prod.js",
     "lint": "eslint --ext .js --ext .jsx src",
-    "lint-fix": "eslint --fix --ext .js --fix --ext .jsx src"
+    "lint-fix": "eslint --fix --ext .js --fix --ext .jsx src",
+    "prepublish": "npm run build"
   },
   "keywords": [],
   "author": "",
@@ -57,6 +57,7 @@
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "ora": "^3.4.0",
     "postcss-loader": "^3.0.0",
+    "react-hot-loader": "^4.12.13",
     "rimraf": "^3.0.0",
     "sass": "^1.22.12",
     "sass-loader": "^8.0.0",
