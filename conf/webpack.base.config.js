@@ -14,23 +14,23 @@ module.exports = {
 	},
 	module: {
 		rules: [
-			{
-				enforce: 'pre',
-				test: /\.(js|html|vue)$/,
-				include: [
-          __path_src()
-				],
-				use: [
-					{
-						loader: 'eslint-loader',
-						options: {
-              formatter: require('eslint-friendly-formatter'),
-              fix: true,
-              failOnError: true
-						}
-					}
-				]
-			},
+		// 	{
+		// 		enforce: 'pre',
+		// 		test: /\.(js|html|vue)$/,
+		// 		include: [
+        //   __path_src()
+		// 		],
+		// 		use: [
+		// 			{
+		// 				loader: 'eslint-loader',
+		// 				options: {
+        //       formatter: require('eslint-friendly-formatter'),
+        //       fix: true,
+        //       failOnError: true
+		// 				}
+		// 			}
+		// 		]
+		// 	},
 			{
 				test: /\.vue$/,
 				include: [

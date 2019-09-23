@@ -3,6 +3,7 @@ var baseConfig = require('./webpack.base.config');
 var merge = require('webpack-merge');
 var MiniCssExtractPlugin = require('mini-css-extract-plugin');
 var OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+// const nodeExternals = require('webpack-node-externals');
 
 function __path_src() {
 	return path.resolve(__dirname, '../src');
@@ -35,7 +36,7 @@ let config = {
   mode: 'production',
 	devtool: false,
   entry: {
-    index: path.resolve(__dirname, '../src/index.js')
+    index: path.resolve(__dirname, '../src/mirco/index.js')
   },
   output: {
     path: path.resolve(__dirname, '../dist'),
@@ -49,15 +50,12 @@ let config = {
   ],
   module: {
     rules: [
-			{
-				resource: {
-					test: /\.css$/,
-					include: [
-						__path_src()
-					]
-				},
-				use: __vueCssLoaders()
-			},
+      {
+        test: /\.css$/,
+        use: [          
+          MiniCssExtractPlugin.loader,
+           'css-loader']
+      },
 			{
 				resource: {
 					test: /\.scss$/,
@@ -119,7 +117,7 @@ let config = {
         safe: true
       }
     })
-  ]
+  ],
 };
 
 module.exports = merge(baseConfig, config);

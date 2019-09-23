@@ -1,15 +1,14 @@
 import React from 'react';
-// import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import { store } from './store';
 import Layout from './layout';
 
-import Routers from './router';
+import Routers from './router/micro';
+import 'antd/dist/antd.css'
 
-import './index.css';
-
-const Root = () => (
+const Roots = () => (
   <BrowserRouter>
     <Provider store={store}>
       <Layout>
@@ -18,4 +17,8 @@ const Root = () => (
     </Provider>
   </BrowserRouter>
 );
-export default Root;
+ReactDOM.render(
+  <Roots />,
+  document.getElementById('root')
+);
+

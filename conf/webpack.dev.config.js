@@ -6,7 +6,7 @@ var merge = require('webpack-merge');
 
 let config = {
   mode: 'development',
-  entry: './src/dev/main.js',
+  entry: path.resolve(__dirname, '../src/mirco/mirco.js'),
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, './dist'),

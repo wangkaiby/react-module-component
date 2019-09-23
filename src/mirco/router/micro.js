@@ -8,7 +8,7 @@ import {RefsH1} from '../containers/Hoc'
 import Parent from '../containers/extend'
 import Usehook from '../containers/Usehook'
 
-
+import Root from "../../dist/bundle.js"
 
 
 
@@ -23,7 +23,7 @@ export default () => {
             <Route path="/hoc" component={RefsH1}/>
             <Route path="/extends" component={Parent}/>
             <Route path="/usehook" component={Usehook}/>
-            <Route path="/home" render={() => <div>Home</div>}/>
+            <Route path="/home" render={Root}/>
 
 
             <Redirect to="/"/>
