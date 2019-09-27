@@ -8,7 +8,7 @@ function __path_src() {
 	return path.resolve(__dirname, '../src');
 }
 
-function __vueCssLoaders(preProcessorName) {
+function __reactCssLoaders(preProcessorName) {
   let loaders = [
     MiniCssExtractPlugin.loader,
     'css-loader',
@@ -56,7 +56,7 @@ let config = {
 						__path_src()
 					]
 				},
-				use: __vueCssLoaders()
+				use: __reactCssLoaders()
 			},
 			{
 				resource: {
@@ -65,7 +65,7 @@ let config = {
 						__path_src()
 					]
 				},
-				use: __vueCssLoaders('scss')
+				use: __reactCssLoaders('scss')
 			},
 			{
 				resource: {
@@ -74,7 +74,7 @@ let config = {
 						__path_src()
 					]
 				},
-				use: __vueCssLoaders('sass')
+				use: __reactCssLoaders('sass')
 			},
 			{
 				resource: {
@@ -83,7 +83,7 @@ let config = {
 						__path_src()
 					]
 				},
-				use: __vueCssLoaders('less')
+				use: __reactCssLoaders('less')
       },
       {
 				resource: {
@@ -92,7 +92,7 @@ let config = {
 						__path_src()
 					]
 				},
-				use: __vueCssLoaders('stylus')
+				use: __reactCssLoaders('stylus')
 			}
     ]
   },

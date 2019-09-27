@@ -10,7 +10,7 @@ function __path_test() {
 
 module.exports = {
 	resolve: {
-		extensions: ['.js', '.vue', '.json']
+		extensions: ['.js', '.jsx', '.json']
 	},
 	module: {
 		rules: [
@@ -32,19 +32,7 @@ module.exports = {
 				]
 			},
 			{
-				test: /\.vue$/,
-				include: [
-          __path_src(),
-          __path_test()
-				],
-				use: [
-					{
-						loader: 'vue-loader'
-					}
-				]
-			},
-			{
-				test: /\.js$/,
+				test: /\.(js|jsx)$/,
 				include: [
           __path_src(),
           __path_test()

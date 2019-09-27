@@ -27,4 +27,5 @@ import { xxxComponent } from PackageName
 3: jsx中使用组件
 <xxxComponent/>
 
+dev文件夹 为开发环境，可以通过npm run start 启动开发
 ```

@@ -10,9 +10,8 @@ function __path_test() {
   return path.resolve(__dirname, '../test/unit');
 }
 
-function __vueCssLoaders(preProcessorName) {
+function __reactCssLoaders(preProcessorName) {
   let loaders = [
-    'vue-style-loader',
     'css-loader',
     'postcss-loader'
   ];
@@ -35,7 +34,7 @@ var testConfig = merge(baseConfig, {
   mode: 'development',
 	devtool: 'inline-source-map',
   resolve: {
-    extensions: ['.js', '.vue', '.json'],
+    extensions: ['.js', '.jsx', '.json'],
   },
   module: {
     rules: [
@@ -47,7 +46,7 @@ var testConfig = merge(baseConfig, {
             __path_test()
 					]
 				},
-				use: __vueCssLoaders()
+				use: __reactCssLoaders()
 			},
 			{
 				resource: {
@@ -57,7 +56,7 @@ var testConfig = merge(baseConfig, {
             __path_test()
 					]
 				},
-				use: __vueCssLoaders('scss')
+				use: __reactCssLoaders('scss')
 			},
 			{
 				resource: {
@@ -67,7 +66,7 @@ var testConfig = merge(baseConfig, {
             __path_test()
 					]
 				},
-				use: __vueCssLoaders('sass')
+				use: __reactCssLoaders('sass')
 			},
 			{
 				resource: {
@@ -77,7 +76,7 @@ var testConfig = merge(baseConfig, {
             __path_test()
 					]
 				},
-				use: __vueCssLoaders('less')
+				use: __reactCssLoaders('less')
 			}
     ]
   }
